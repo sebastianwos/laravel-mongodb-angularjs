@@ -1,0 +1,17 @@
+<div class="row search-box">
+    <div class="col-lg-6">
+        <div class="input-group">
+            <input ng-model="$ctrl.query" class="form-control" placeholder="Nazwa linii"/>
+            <span class="input-group-btn">
+                <button class="btn btn-default" type="button" ng-click="$ctrl.clearQuery()">Wyczyść filtr</button>
+            </span>
+        </div><!-- /input-group -->
+    </div><!-- /.col-lg-6 -->
+</div><!-- /.row -->
+<div class="panel panel-default">
+    <div class="panel-body">
+        <a href="/#!/lines/{{ line._id }}" ng-repeat="line in $ctrl.lines  | filter:$ctrl.query">
+            <span class="label label-default">{{ line.name }}</span>
+        </a>
+    </div>
+</div>

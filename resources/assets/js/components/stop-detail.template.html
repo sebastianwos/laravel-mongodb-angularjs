@@ -1,0 +1,18 @@
+<div class="panel panel-default">
+    <div class="panel-body">
+        <time></time>
+        <table class="table" ng-repeat="(key, data) in $ctrl.table">
+            <tr>
+                <th class="text-center" colspan="24">{{ key == 'dni-robocze' ? 'Dni robocze' : (key == 'soboty' ? 'Soboty' : 'Niedziele i Świeta') }}</th>
+            </tr>
+            <tr>
+                <th ng-class="{ 'info': $ctrl.hour == hour }"  ng-repeat="(hour, minutes) in data">{{ hour }}</th>
+            </tr>
+            <tr>
+                <td ng-class="{ 'info': $ctrl.hour == hour}" ng-repeat="(hour, minutes) in data">
+                    <p ng-class="{ 'danger': ($ctrl.hour == hour && $ctrl.minutes < minute) }" ng-repeat="minute in minutes">{{ minute }}</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>

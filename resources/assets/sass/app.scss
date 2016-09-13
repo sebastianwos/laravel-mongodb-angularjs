@@ -1,0 +1,29 @@
+
+// Fonts
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
+
+// Variables
+@import "variables";
+
+// Bootstrap
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+body{
+  padding: 20px 0px;
+}
+
+.search-box{margin-bottom: 10px;}
+
+.label{
+  display: inline-block;
+  margin-right: 10px;
+}
+
+table{
+  th, td{
+    text-align: center;
+    p.danger{
+      color: red;
+    }
+  }
+}

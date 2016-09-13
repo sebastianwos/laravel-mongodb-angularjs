@@ -1,0 +1,1 @@
+angular.module('busStopsApp', ['lineDetail', 'stopDetail', 'time']);

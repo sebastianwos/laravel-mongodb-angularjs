@@ -1,0 +1,1 @@
+angular.module('lineDetail', ['ngRoute', 'stopDetail', 'time']);
